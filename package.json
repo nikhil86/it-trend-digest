@@ -1,0 +1,32 @@
+{
+  "name": "it-trend-digest",
+  "version": "1.0.0",
+  "description": "Scheduled IT/AI trend digest: fetch, summarize with OpenAI, and email.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node --env-file=.env --enable-source-maps dist/index.js",
+    "dev": "tsx src/index.ts",
+    "build": "tsc -p .",
+    "run-once": "tsx src/index.ts --once"
+  },
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.13",
+    "openai": "^5.0.0",
+    "rss-parser": "^3.13.0",
+    "winston": "^3.13.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/nodemailer": "^6.4.15",
+    "@types/node-cron": "^3.0.11",
+    "tsx": "^4.16.2",
+    "typescript": "^5.6.3"
+  }
+}
