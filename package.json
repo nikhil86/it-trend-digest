@@ -8,7 +8,8 @@
     "start": "node --env-file=.env --enable-source-maps dist/index.js",
     "dev": "tsx src/index.ts",
     "build": "tsc -p .",
-    "run-once": "tsx src/index.ts --once"
+    "run-once": "tsx src/index.ts --once",
+    "heroku-postbuild": "tsc -p ."
   },
   "engines": {
     "node": ">=20.10.0"
